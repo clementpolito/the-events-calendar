@@ -6,7 +6,7 @@ class Tribe__Events__REST__V1__Endpoints__Archive_Event
 	implements Tribe__REST__Endpoints__Endpoint_Interface, Tribe__Documentation__Swagger__Provider_Interface {
 
 	/**
-	 * @var Tribe__Events__REST__Interfaces__Post_Repository
+	 * @var Tribe__REST__Post_Repository_Interface
 	 */
 	protected $repository;
 
@@ -34,11 +34,11 @@ class Tribe__Events__REST__V1__Endpoints__Archive_Event
 	 * Tribe__Events__REST__V1__Endpoints__Archive_Event constructor.
 	 *
 	 * @param Tribe__REST__Messages_Interface                  $messages
-	 * @param Tribe__Events__REST__Interfaces__Post_Repository $repository
+	 * @param Tribe__REST__Post_Repository_Interface $repository
 	 */
 	public function __construct(
 		Tribe__REST__Messages_Interface $messages,
-		Tribe__Events__REST__Interfaces__Post_Repository $repository
+		Tribe__REST__Post_Repository_Interface $repository
 	) {
 		parent::__construct( $messages );
 		$this->repository = $repository;

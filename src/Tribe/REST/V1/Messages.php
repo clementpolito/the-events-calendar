@@ -8,6 +8,11 @@ class Tribe__Events__REST__V1__Messages implements Tribe__REST__Messages_Interfa
 	 */
 	protected $message_prefix = 'rest-v1:';
 
+	/**
+	 * @var array
+	 */
+	private $messages = array();
+
 	public function __construct() {
 		$this->messages = array(
 			'missing-event-id'                => __( 'The event ID is missing from the request', 'the-events-calendar' ),

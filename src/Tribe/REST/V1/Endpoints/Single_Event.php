@@ -15,18 +15,21 @@ class Tribe__Events__REST__V1__Endpoints__Single_Event
 	 */
 	protected $serving;
 	/**
-	 * @var Tribe__Events__REST__Interfaces__Post_Repository
+	 * @var Tribe__REST__Post_Repository_Interface
 	 */
 	private $post_repository;
 
 	/**
 	 * Tribe__Events__REST__V1__Endpoints__Single_Event constructor.
 	 *
-	 * @param Tribe__REST__Main $main
+	 * @param Tribe__REST__Messages_Interface $messages
+	 * @param Tribe__REST__Post_Repository_Interface $post_repository
+	 *
+	 * @internal param Tribe__REST__Main $main
 	 */
 	public function __construct(
 		Tribe__REST__Messages_Interface $messages,
-		Tribe__Events__REST__Interfaces__Post_Repository $post_repository
+		Tribe__REST__Post_Repository_Interface $post_repository
 	) {
 		parent::__construct( $messages );
 		$this->post_repository = $post_repository;

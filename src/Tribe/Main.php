@@ -417,6 +417,10 @@ if ( ! class_exists( 'Tribe__Events__Main' ) ) {
 
 			// iCal
 			tribe_singleton( 'tec.iCal', 'Tribe__Events__iCal', array( 'hook' ) );
+
+			// REST API v1
+			tribe_singleton( 'tec.rest-v1.main', 'Tribe__Events__REST__V1__Main', array( 'bind_implementations', 'hook' ) );
+			tribe( 'tec.rest-v1.main' );
 		}
 
 		/**
@@ -667,6 +671,7 @@ if ( ! class_exists( 'Tribe__Events__Main' ) ) {
 			tribe( 'tec.inactive-events' );
 			tribe( 'tec.ignored-events' );
 			tribe( 'tec.iCal' );
+			tribe( 'tec.rest-v1.main' );
 		}
 
 		/**

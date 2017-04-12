@@ -1,7 +1,7 @@
 <?php
 
 
-class Tribe__Events__REST__V1__Post_Repository implements Tribe__Events__REST__Interfaces__Post_Repository {
+class Tribe__Events__REST__V1__Post_Repository implements Tribe__REST__Post_Repository_Interface {
 
 	/**
 	 * A post type to get data request handler map.
